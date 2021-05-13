@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<meta charset="UTF-8" />
 <body>
 
 <h2>JavaScript Class ECMAScript 2015 - ES5</h2>
@@ -22,6 +23,9 @@ function Car(name, year){
 }
 
 myCar = new Car("Ford", 2014);
+
+console.log('Car', Car);
+console.log('myCar', myCar);
 
 document.getElementById("demo").innerHTML = myCar.name + " " + myCar.getAge();
 </script>
