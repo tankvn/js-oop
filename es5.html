@@ -2,22 +2,28 @@
 <html>
 <body>
 
-<h2>JavaScript Class ECMAScript 2015 - ES6</h2>
+<h2>JavaScript Class ECMAScript 2015 - ES5</h2>
 
 <p>How to use a JavaScript Class.</p>
 
 <p id="demo"></p>
 
 <script>
-class Car {
-  constructor(name, year) {
-    this.name = name;
-    this.year = year;
+function Car(name, year){
+  // Properties
+  this.name = name;
+  this.year = year;
+  
+  // Method
+  this.getAge = function(){
+    let date = new Date();
+    return date.getFullYear() - this.year;
   }
 }
 
 myCar = new Car("Ford", 2014);
-document.getElementById("demo").innerHTML = myCar.name + " " + myCar.year;
+
+document.getElementById("demo").innerHTML = myCar.name + " " + myCar.getAge();
 </script>
 
 </body>
