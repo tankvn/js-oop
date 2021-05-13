@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8" />
+<script src="./Person.js" type="text/javascript"></script>
+<body>
+
+<h2>JavaScript Class ECMAScript 2015 - ES5</h2>
+
+<p>How to use a JavaScript Class.</p>
+
+<p id="demo"></p>
+
+<script>
+myPerson = new Person("John", "Smith", 2000);
+
+console.log('Person', Person);
+console.log('myPerson', myPerson);
+
+document.getElementById("demo").innerHTML = myPerson.getFullName() + " " + myPerson.getAge();
+</script>
+
+</body>
+</html>

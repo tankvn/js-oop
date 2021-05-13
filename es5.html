@@ -22,12 +22,17 @@ function Car(name, year){
   }
 }
 
+Car.prototype.to_str = function(){
+  return this.name + ' ' + this.year;
+}
+
 myCar = new Car("Ford", 2014);
 
 console.log('Car', Car);
 console.log('myCar', myCar);
 
-document.getElementById("demo").innerHTML = myCar.name + " " + myCar.getAge();
+//document.getElementById("demo").innerHTML = myCar.name + " " + myCar.getAge();
+document.getElementById("demo").innerHTML = myCar.to_str();
 </script>
 
 </body>
