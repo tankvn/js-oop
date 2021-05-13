@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Class ECMAScript 2015 - ES6</h2>
+
+<p>How to use a JavaScript Class.</p>
+
+<p id="demo"></p>
+
+<script>
+class Person {
+  constructor(firstName, lastName, year){
+    this.firstName = firstName;
+    this.lastName = lastName;    
+    this.year = year;
+  }
+
+  getFullName() {
+    return `${this.firstName} ${this.lastName}`;   // METHOD
+  }
+
+  getAge(){
+    let date = new Date();
+    return date.getFullYear() - this.year;
+  }
+}
+
+class Customer extends Person {
+  constructor(firstName, lastName, age, memberShip){
+    Super(firstName, lastName, age)
+    this.memberShip = memberShip;
+  } 
+}
+
+myPerson = new Person("John", "Smith", 2000);
+document.getElementById("demo").innerHTML = myPerson.getFullName() + " " + myPerson.getAge();
+
+
+
+</script>
+
+</body>
+</html>
